@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">CV Builder</string>
+    <string name="personal_info">Personal Info</string>
+    <string name="education">Education</string>
+    <string name="Skills">Skills</string>
+    <string name="university">University</string>
+    <string name="spinner_hint">Degree</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
+    <string name="save">Save</string>
+    <string name="empty_message">Please, Fill Empty Fields</string>
+    <string name="edu_saved_msg">Education Saved</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string-array name="spinner_degree">
+        <item>Bachelor\'s degree</item>
+        <item>Master\'s degree</item>
+    </string-array>
+</resources>

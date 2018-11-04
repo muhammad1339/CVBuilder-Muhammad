@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/eight_dp_margin"
+        android:layout_marginTop="@dimen/eight_dp_margin"
+        android:layout_marginEnd="@dimen/eight_dp_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/uni_stage_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/university"
+            android:inputType="text" />
+    </android.support.design.widget.TextInputLayout>
+
+    <Spinner
+        android:id="@+id/spinner_degree"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/eight_dp_margin"
+        android:layout_marginTop="@dimen/eight_dp_margin"
+        android:layout_marginEnd="@dimen/eight_dp_margin"
+        android:prompt="@string/spinner_hint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/textInputLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/eight_dp_margin"
+        android:layout_marginTop="@dimen/eight_dp_margin"
+        app:layout_constraintEnd_toStartOf="@+id/textInputLayout3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_degree">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/from_date_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/from"
+            android:inputType="date" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/textInputLayout3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/eight_dp_margin"
+        android:layout_marginTop="@dimen/eight_dp_margin"
+        android:layout_marginEnd="@dimen/eight_dp_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textInputLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_degree">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/to_date_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/to"
+            android:inputType="date" />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_save_education"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/eight_dp_margin"
+        android:layout_marginEnd="@dimen/eight_dp_margin"
+        android:layout_marginBottom="@dimen/eight_dp_margin"
+        android:text="@string/save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>
