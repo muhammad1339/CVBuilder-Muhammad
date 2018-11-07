@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.SkillsActivity">
+    tools:context=".activities.SkillsActivity"
+    android:id="@+id/skills_frag_container">
 
 </android.support.constraint.ConstraintLayout>

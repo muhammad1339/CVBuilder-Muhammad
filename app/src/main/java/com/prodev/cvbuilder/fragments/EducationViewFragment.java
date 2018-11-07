@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.prodev.cvbuilder.R;
+import com.prodev.cvbuilder.data.Constant;
 import com.prodev.cvbuilder.data.Education;
 import com.prodev.cvbuilder.data.PrefManager;
 
@@ -31,8 +32,8 @@ public class EducationViewFragment extends Fragment {
     private TextView toDateTextView;
     private Button btnEdit;
     private Button btnDelete;
-    private OnChangePrefListener mListener;
     private Education mEducation;
+    private OnChangePrefListener mListener;
 
     @Override
     public void onAttach(Context context) {
@@ -50,7 +51,7 @@ public class EducationViewFragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mEducation = PrefManager.getEducationObject(getContext());
+        mEducation = PrefManager.getEducationObject(getContext(),Constant.EDUCATION_KEY);
     }
 
     @Nullable
@@ -89,8 +90,8 @@ public class EducationViewFragment extends Fragment {
         degreeTextView = view.findViewById(R.id.text_view_degree);
         fromDateTextView = view.findViewById(R.id.text_view_from_date);
         toDateTextView = view.findViewById(R.id.text_view_to_date);
-        btnEdit = view.findViewById(R.id.btn_edit);
-        btnDelete = view.findViewById(R.id.btn_delete);
+        btnEdit = view.findViewById(R.id.btn_edit_edu);
+        btnDelete = view.findViewById(R.id.btn_delete_edu);
     }
 
 

@@ -10,6 +10,7 @@ import android.text.TextUtils;
 import com.prodev.cvbuilder.R;
 import com.prodev.cvbuilder.data.Constant;
 import com.prodev.cvbuilder.data.Education;
+import com.prodev.cvbuilder.data.PrefManager;
 import com.prodev.cvbuilder.fragments.EducationEditFragment;
 import com.prodev.cvbuilder.fragments.EducationViewFragment;
 
@@ -60,8 +61,7 @@ public class EducationActivity extends AppCompatActivity
     @Override
     public void onDelete() {
         educationEditFragment.setEducationObject(null);
-        SharedPreferences sharedPreferences = getSharedPreferences(Constant.PREF_FILE, MODE_PRIVATE);
-        sharedPreferences.edit().clear().apply();
+        PrefManager.clearPref(getApplicationContext(), Constant.EDUCATION_KEY);
         fragmentManager.beginTransaction().replace(R.id.education_frag_container, educationEditFragment).commit();
     }
 }

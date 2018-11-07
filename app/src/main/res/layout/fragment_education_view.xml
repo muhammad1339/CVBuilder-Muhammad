@@ -59,7 +59,7 @@
         tools:text="To : 2018" />
 
     <Button
-        android:id="@+id/btn_edit"
+        android:id="@+id/btn_edit_edu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/eight_dp_margin"
@@ -67,12 +67,12 @@
         android:layout_marginBottom="@dimen/eight_dp_margin"
         android:text="@string/edit"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btn_delete"
+        app:layout_constraintEnd_toStartOf="@+id/btn_delete_edu"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline" />
 
     <Button
-        android:id="@+id/btn_delete"
+        android:id="@+id/btn_delete_edu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/eight_dp_margin"
@@ -81,7 +81,7 @@
         android:text="@string/delete"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btn_edit"
+        app:layout_constraintStart_toEndOf="@+id/btn_edit_edu"
         app:layout_constraintTop_toTopOf="@+id/guideline" />
 
     <android.support.constraint.Guideline

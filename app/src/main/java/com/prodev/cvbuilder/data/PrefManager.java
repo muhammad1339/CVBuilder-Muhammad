@@ -9,9 +9,11 @@ import com.google.gson.reflect.TypeToken;
 import com.prodev.cvbuilder.R;
 
 import java.lang.reflect.Type;
+import java.util.ArrayList;
+import java.util.List;
 
 public class PrefManager {
-    public static void savePref(Object obj, Context context,String key) {
+    public static void savePref(Object obj, Context context, String key) {
         SharedPreferences sharedPreferences = context.getSharedPreferences(Constant.PREF_FILE, Context.MODE_PRIVATE);
         Gson gson = new Gson();
         Type type = new TypeToken<GenericObject<Object>>() {
@@ -20,18 +22,32 @@ public class PrefManager {
         genericEducation.setObject(obj);
         String eduJson = gson.toJson(genericEducation, type);
         sharedPreferences.edit().putString(key, eduJson).apply();
-        Toast.makeText(context, R.string.edu_saved_msg, Toast.LENGTH_SHORT).show();
+        Toast.makeText(context, R.string.saved_msg, Toast.LENGTH_SHORT).show();
     }
 
-    public static Education getEducationObject(Context context) {
+    public static Education getEducationObject(Context context, String key) {
         SharedPreferences sharedPreferences = context.getSharedPreferences(Constant.PREF_FILE, Context.MODE_PRIVATE);
-        Education education;
         Type type = new TypeToken<GenericObject<Education>>() {
         }.getType();
         Gson gson = new Gson();
-        String eduJson = sharedPreferences.getString(Constant.EDUCATION_KEY, "N/A");
+        String eduJson = sharedPreferences.getString(key, "");
         GenericObject<Education> genericEducation = gson.fromJson(eduJson, type);
-        education = genericEducation.getObject();
-        return education;
+        return genericEducation.getObject();
+    }
+
+    public static List<String> getSkills(Context context, String key) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(Constant.PREF_FILE, Context.MODE_PRIVATE);
+        Type type = new TypeToken<GenericObject<List<String>>>() {
+        }.getType();
+        Gson gson = new Gson();
+        String skillJson = sharedPreferences.getString(key, "");
+        GenericObject<List<String>> listGenericObject = gson.fromJson(skillJson, type);
+
+        return listGenericObject.getObject();
+    }
+
+    public static void clearPref(Context context, String key) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(Constant.PREF_FILE, Context.MODE_PRIVATE);
+        sharedPreferences.edit().remove(key).apply();
     }
 }

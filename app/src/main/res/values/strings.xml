@@ -9,9 +9,13 @@
     <string name="to">To</string>
     <string name="save">Save</string>
     <string name="empty_message">Please, Fill Empty Fields</string>
-    <string name="edu_saved_msg">Education Saved</string>
+    <string name="saved_msg">Object Saved</string>
     <string name="edit">Edit</string>
     <string name="delete">Delete</string>
+    <string name="beginner">Beginner</string>
+    <string name="intermediate">Intermediate</string>
+    <string name="advanced">Advanced</string>
+    <string name="new_skill">New Skill</string>
     <string-array name="spinner_degree">
         <item>Bachelor\'s degree</item>
         <item>Master\'s degree</item>
