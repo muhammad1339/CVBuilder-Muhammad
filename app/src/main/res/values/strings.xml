@@ -16,6 +16,11 @@
     <string name="intermediate">Intermediate</string>
     <string name="advanced">Advanced</string>
     <string name="new_skill">New Skill</string>
+    <string name="name">Name</string>
+    <string name="phone">Phone</string>
+    <string name="email">ُEmail</string>
+    <string name="date_of_birth">Date Of Birth</string>
+    <string name="address">Address</string>
     <string-array name="spinner_degree">
         <item>Bachelor\'s degree</item>
         <item>Master\'s degree</item>

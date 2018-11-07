@@ -4,13 +4,15 @@ public class PersonalInfo {
     private String name;
     private String phone;
     private String email;
-    private int age;
+    private String address;
+    private String dateOfBirth;
 
-    public PersonalInfo(String name, String phone, String email, int age) {
+    public PersonalInfo(String name, String phone, String email, String address, String dateOfBirth) {
         this.name = name;
         this.phone = phone;
         this.email = email;
-        this.age = age;
+        this.address = address;
+        this.dateOfBirth = dateOfBirth;
     }
 
     public String getName() {
@@ -25,7 +27,11 @@ public class PersonalInfo {
         return email;
     }
 
-    public int getAge() {
-        return age;
+    public String getAddress() {
+        return address;
+    }
+
+    public String getDateOfBirth() {
+        return dateOfBirth;
     }
 }
