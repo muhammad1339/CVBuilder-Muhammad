@@ -75,11 +75,7 @@
 
     <Button
         android:id="@+id/btn_save_education"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/eight_dp_margin"
-        android:layout_marginEnd="@dimen/eight_dp_margin"
-        android:layout_marginBottom="@dimen/eight_dp_margin"
+        style="@style/ButtonStyle"
         android:text="@string/save"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

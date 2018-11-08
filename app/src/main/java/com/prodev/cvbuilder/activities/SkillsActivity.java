@@ -14,9 +14,10 @@ import com.prodev.cvbuilder.fragments.SkillsViewFragment;
 
 import java.util.ArrayList;
 import java.util.List;
+import com.prodev.cvbuilder.callbacks.OnSaveListener;
 
 public class SkillsActivity extends AppCompatActivity
-        implements SkillsEditFragment.OnSaveListener
+        implements OnSaveListener
         , SkillsViewFragment.OnChangePrefListener {
     FragmentManager fragmentManager;
     SkillsEditFragment skillsEditFragment;

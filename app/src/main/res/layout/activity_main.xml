@@ -8,9 +8,8 @@
 
     <Button
         android:id="@+id/btn_personal_info"
-        android:layout_width="160dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/eight_dp_margin"
+        style="@style/ButtonStyle"
+        android:layout_width="140dp"
         android:onClick="goPersonalInfoActivity"
         android:text="@string/personal_info"
         app:layout_constraintBottom_toTopOf="@+id/btn_education"
@@ -20,9 +19,8 @@
 
     <Button
         android:id="@+id/btn_education"
-        android:layout_width="160dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/eight_dp_margin"
+        style="@style/ButtonStyle"
+        android:layout_width="140dp"
         android:onClick="goEducationActivity"
         android:text="@string/education"
         app:layout_constraintBottom_toTopOf="@+id/btn_skills"
@@ -32,11 +30,12 @@
 
     <Button
         android:id="@+id/btn_skills"
-        android:layout_width="160dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/eight_dp_margin"
+        style="@style/ButtonStyle"
+        android:layout_width="140dp"
+        android:layout_marginBottom="8dp"
         android:onClick="goSkillsActivity"
         android:text="@string/Skills"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_education" />

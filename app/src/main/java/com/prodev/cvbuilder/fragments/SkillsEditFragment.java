@@ -26,11 +26,10 @@ import com.prodev.cvbuilder.data.PrefManager;
 
 import java.util.ArrayList;
 import java.util.List;
+import com.prodev.cvbuilder.callbacks.OnSaveListener;
 
 public class SkillsEditFragment extends Fragment {
-    public interface OnSaveListener {
-        void onSave();
-    }
+
 
     OnSaveListener mListener;
 

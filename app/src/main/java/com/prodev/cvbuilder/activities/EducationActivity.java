@@ -13,9 +13,10 @@ import com.prodev.cvbuilder.data.Education;
 import com.prodev.cvbuilder.data.PrefManager;
 import com.prodev.cvbuilder.fragments.EducationEditFragment;
 import com.prodev.cvbuilder.fragments.EducationViewFragment;
+import com.prodev.cvbuilder.callbacks.OnSaveListener;
 
 public class EducationActivity extends AppCompatActivity
-        implements EducationEditFragment.OnSaveListener
+        implements OnSaveListener
         , EducationViewFragment.OnChangePrefListener {
     FragmentManager fragmentManager;
     EducationEditFragment educationEditFragment;

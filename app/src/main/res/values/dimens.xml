@@ -2,4 +2,7 @@
 <resources>
     <dimen name="eight_dp_margin">8dp</dimen>
     <dimen name="sixteen_dp_margin">16dp</dimen>
+    <dimen name="btn_radius">30dp</dimen>
+    <dimen name="btn_width">100dp</dimen>
+    <dimen name="btn_height">48dp</dimen>
 </resources>

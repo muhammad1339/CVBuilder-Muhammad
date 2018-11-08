@@ -35,6 +35,16 @@ public class PrefManager {
         return genericEducation.getObject();
     }
 
+    public static PersonalInfo getPersonalInfoObject(Context context, String key) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(Constant.PREF_FILE, Context.MODE_PRIVATE);
+        Type type = new TypeToken<GenericObject<PersonalInfo>>() {
+        }.getType();
+        Gson gson = new Gson();
+        String personalInfoJson = sharedPreferences.getString(key, "");
+        GenericObject<PersonalInfo> personalInfoGenericObject = gson.fromJson(personalInfoJson, type);
+        return personalInfoGenericObject.getObject();
+    }
+
     public static List<String> getSkills(Context context, String key) {
         SharedPreferences sharedPreferences = context.getSharedPreferences(Constant.PREF_FILE, Context.MODE_PRIVATE);
         Type type = new TypeToken<GenericObject<List<String>>>() {

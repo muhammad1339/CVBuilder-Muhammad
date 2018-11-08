@@ -18,9 +18,11 @@ import com.prodev.cvbuilder.R;
 import com.prodev.cvbuilder.data.Constant;
 import com.prodev.cvbuilder.data.Education;
 import com.prodev.cvbuilder.data.PrefManager;
+import com.prodev.cvbuilder.callbacks.OnSaveListener;
 
 
 public class EducationEditFragment extends Fragment {
+
     String uniStage;
     String fromDate;
     String toDate;
@@ -33,9 +35,7 @@ public class EducationEditFragment extends Fragment {
         mEducation = education;
     }
 
-    public interface OnSaveListener {
-        void onSave();
-    }
+
 
     OnSaveListener mListener;
 
