@@ -139,7 +139,6 @@ public class SkillsEditFragment extends Fragment {
         return radioGroup;
     }
 
-
     private RadioButton getRadioButton(int stringRes) {
         RadioButton radioButton = new RadioButton(getContext());
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
